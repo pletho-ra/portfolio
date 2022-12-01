@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import './App.scss';
 import { Layout, Home, About } from './Components'
 
@@ -8,7 +8,7 @@ function App() {
       <Routes>
         <Route path ="/" element = { <Layout />}>
           <Route index element = { <Home /> } />
-          <Route path ="about" element = { <About/> } />
+          <Route path ="/about" element = { <About/> } />
         </Route>   
       </Routes>
     </>
