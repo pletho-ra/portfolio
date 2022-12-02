@@ -19,7 +19,7 @@
 .cube-spinner{
     animation: spincube;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
     animation-duration: 12s;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;

@@ -3,6 +3,7 @@ import Layout from './layout/Layout';
 import Home from './Home/Home';
 import Logo from './Logo/Logo';
 import About from './About/About';
+import Contact from './contact/Contact';
 
 export {
     SideBar,
@@ -10,4 +11,5 @@ export {
     Home,
     Logo,
     About,
+    Contact,
 };
