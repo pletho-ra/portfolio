@@ -4,6 +4,7 @@ import Home from './Home/Home';
 import Logo from './Logo/Logo';
 import About from './About/About';
 import Contact from './contact/Contact';
+import CubeSpin from './CubeSpin/CubeSpin'
 
 export {
     SideBar,
@@ -12,4 +13,5 @@ export {
     Logo,
     About,
     Contact,
+    CubeSpin
 };

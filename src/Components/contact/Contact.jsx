@@ -2,16 +2,29 @@ import { useState, useRef, useEffect } from "react";
 
 import { AnimatedLetters } from "../../constants";
 import "./Contact.scss";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [letterClass, setLetterClass] =useState('text-animate');
-    const form =useRef();
+    const refform =useRef();
 
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     })
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_htjqy7n', 'template_m061zon', refform.current, 'BXTx0vbJGJwc6ZTbR')
+          .then(() => {
+              alert('Sent email successfully');
+              window.location.reload(false);
+          }, () => {
+              alert('Failed to send email, please try again');
+          });
+      };
 
     return (
         <div className="container contact-page">
@@ -29,16 +42,16 @@ const Contact = () => {
                 </p>
 
                 <div className="contact-form">
-                    <form ref ={form}>
+                    <form ref ={refform} onSubmit = {sendEmail}>
                         <ul>
                             <li className="half">
-                                <input type="text" placeholder = "Name" name="name" required />
+                                <input autoComplete="none" type="text" placeholder = "Name" name="name" required />
                             </li>
                             <li className="half">
-                                <input type="email" placeholder="Email" name="email" required />
+                                <input autoComplete="none" type="email" placeholder="Email" name="email" required />
                             </li>
                             <li>
-                                <input type="text" name="subject" placeholder="Subject"/>
+                                <input autoComplete="none" type="text" name="subject" placeholder="Subject"/>
                             </li>
                             <li>
                                 <textarea name="message" placeholder="message"></textarea>

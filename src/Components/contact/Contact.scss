@@ -17,7 +17,7 @@
             display : block;
             clear: both;
             position: relative;
-            animation : fadeInUp 2s 2s;
+            animation : fadeIn 2s 2s;
             animation : forwards;
         }
 
@@ -58,6 +58,7 @@
     .flat-button{
         float: right;
         border: 1px solid #ffd700;
+        border-radius: 4px;
         color:#ffd700;
         margin-right: 10px;
         text-align:center;
@@ -67,6 +68,13 @@
         font-size:11px;
         letter-spacing: 3px;
         padding: 8px 10px;
+
+        &:hover{
+            cursor: pointer;
+            color: #000;
+            background: #ffd700;
+            font-weight: bold;
+        }
 
     }
 }
